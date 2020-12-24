@@ -1,0 +1,38 @@
+.bootstrapSkin a.mceButtonActive, .bootstrapSkin a.mceButtonSelected {
+    /*tinymce bootstrap*/
+    background-color: #e6e6e6;
+    background-image: none;
+}
+.bootstrapSkin .mceListBoxMenu, .bootstrapSkin .mceButtonMenu {
+    overflow: auto;
+    overflow-x: hidden
+}
+.bootstrapSkin .mceSplitButtonDisabled .mceAction, .bootstrapSkin .mceSplitButtonDisabled a.mceOpen {
+    opacity: 0.3;
+    filter: alpha(opacity = 30);
+}
+
+.bootstrapSkin .mceMenu a {
+    /*padding: 3px 0 4px 0*/
+    /* <novius-os> */
+    padding: 1px 0 2px 0;
+    /* </novius-os> */
+}
+.bootstrapSkin .mceMenu .mceText {
+    position: relative;
+    display: block;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+    color: #000;
+    cursor: default;
+    margin: 0;
+    display: block;
+    /* <novius-os> */
+    height: auto;
+    line-height: normal;
+    padding: 4px 25px;
+    /* </novius-os> */
+}
+
+.bootstrapSkin .mce_spellchecker {
+    background-position: -540px -20px !important;
+}

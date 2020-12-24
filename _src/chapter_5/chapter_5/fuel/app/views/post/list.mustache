@@ -1,0 +1,13 @@
+<div class="row post_list" data-user_id="{{user.id}}">
+    {{> post/inside_list}}
+    <div class="load_more see_more">
+        <button type="button" class="btn btn-default btn-lg">
+            <span
+                class="glyphicon glyphicon-arrow-down"></span>
+            See more...
+        </button>
+        <div class="loading_message">
+            Loading...
+        </div>
+    </div>
+</div>

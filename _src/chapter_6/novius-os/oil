@@ -1,0 +1,25 @@
+<?php
+/**
+ * Set error reporting and display errors settings. You will want to change these when in production.
+ */
+error_reporting(-1);
+ini_set('display_errors', 1);
+
+define('FROM_OIL', 1);
+
+define('NOS_ENTRY_POINT', 'ENTRY_POINT_OIL');
+
+$_SERVER['NOS_ROOT'] = __DIR__;
+$_SERVER['REQUEST_URI'] = '/';
+
+// Boot the app
+require __DIR__.'/novius-os/framework/bootstrap.php';
+
+Package::load('oil');
+
+// Fire up the command line interfact
+Command::init($_SERVER['argv']);
+
+echo PHP_EOL;
+
+/* End of file oil */

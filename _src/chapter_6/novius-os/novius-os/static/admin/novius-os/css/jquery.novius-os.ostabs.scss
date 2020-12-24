@@ -1,0 +1,265 @@
+/*
+ * NOVIUS OS - Web OS for digital communication
+ *
+ * @copyright  2011 Novius
+ * @license    GNU Affero General Public License v3 or (at your option) any later version
+ *             http://www.gnu.org/licenses/agpl-3.0.html
+ * @link http://www.novius-os.org
+ */
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/css3/background-size";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/text-shadow";
+@import "compass/css3/images";
+$support-for-original-webkit-gradients: true;
+
+body {
+	overflow: hidden;
+}
+
+.nos-ostabs {
+	position: absolute;
+	left : 0px;
+	top : 0px;
+	right : 0px;
+	bottom : 0px;
+	border : 0px;
+
+    > .wijmo-wijmenu {
+        position: absolute;
+    }
+
+    ul.nos-ostabs-nav, div.nos-ostabs-nav {
+        position : absolute;
+        height : 46px;
+        @include box-sizing(border-box);
+        margin: 0;
+        padding: 6px 0 0;
+    }
+
+	.nos-ostabs-header {
+		border : 0;
+		height : 46px;
+
+        ul {
+            @include box-sizing(border-box);
+            margin: 0;
+            padding: 6px 0 0;
+        }
+
+        li {
+            @include box-sizing(content-box);
+            white-space: nowrap;
+            top: 15px;
+            height : 23px;
+            line-height : 32px;
+            position : relative;
+            margin : 0px 2px 0 0;
+            padding : 0px;
+            list-style : none;
+            float : left;
+            border-bottom-width : 0;
+        }
+
+        li.nos-ostabs-desktoptab, li.nos-ostabs-newtab, li.nos-ostabs-app {
+            a {
+                .nos-ostabs-label {
+                    display : none;
+                }
+            }
+        }
+    }
+
+    div.nos-ostabs-tabs {
+        position : absolute;
+        top : 0px;
+        height : 46px;
+        z-index: 4;
+
+		li {
+			a {
+				float: left;
+				padding : 0px 5px;
+				text-decoration: none;
+                cursor: pointer;
+
+				.nos-ostabs-icon {
+					vertical-align : middle;
+					position : relative;
+					top : 2px;
+					float : left;
+					margin-left : 0px;
+					display: block;
+					text-indent: -99999px;
+					overflow: hidden;
+					width: 16px;
+					height: 16px;
+					line-height: 16px;
+					background-repeat: no-repeat;
+				}
+
+				.nos-ostabs-label {
+					position : relative;
+					top : -5px;
+                    height : 24px;
+					margin-left : 5px;
+					width : 200px;
+					display : inline-block;
+					overflow : hidden;
+					text-overflow : ellipsis;
+				}
+			}
+
+			a, a:active, a:visited {
+				color : inherit;
+				font-weight : normal;
+				font-size : 0.8em;
+			}
+
+            span.nos-ostabs-closetab {
+                float: right;
+                margin-top: 4px;
+                cursor: pointer;
+                display: none;
+            }
+		}
+
+        li.ui-state-active {
+            height : 24px;
+
+            span.nos-ostabs-closetab {
+                display: block;
+            }
+        }
+
+		li.nos-ostabs-newtab.ui-state-active {
+			a {
+				.nos-ostabs-label {
+					display : inline-block;
+				}
+			}
+		}
+
+		li.nos-ostabs-selected a, li.ui-state-disabled a, li.ui-state-processing a {
+			cursor: text;
+		}
+
+		li.ui-state-processing a {
+			.nos-ostabs-label {
+				font-style : italic !important;
+			}
+
+			.ui-state-processing {
+				@include background-size(0%, 0%);
+				text-indent : 0;
+			}
+		}
+
+		li.ui-sortable-helper {
+			background : #000;
+			top : 21px;
+			cursor : move;
+
+			a {
+				.nos-ostabs-label {
+					color : #FFF;
+				}
+			}
+		}
+
+        .wijmo-wijsuperpanel-statecontainer {
+            overflow: visible;
+        }
+    }
+
+    div.nos-ostabs-tray {
+        right : 0px;
+        top : 0px;
+        z-index: 4;
+        padding-left: 2px;
+        padding-top: 0px;
+    }
+
+	.nos-ostabs-panel {
+		display: block;
+		position : absolute;
+		@include box-sizing(border-box);
+		left : 0px;
+		top : 45px;
+		bottom : 0px;
+		right : 0px;
+        border-top: 1px solid #7096AB;
+
+		div.nos-ostabs-panel-content {
+			position : absolute;
+			top : 0px;
+			left : 0px;
+			right : 0px;
+			bottom : 0px;
+			padding : 0px;
+			overflow : auto;
+		}
+
+		iframe.nos-ostabs-panel-content {
+			@include box-sizing(border-box);
+			position : absolute;
+			top : 0px;
+			left : 0px;
+			width : 100%;
+			height : 100%;
+		}
+	}
+
+	.nos-ostabs-hide {
+		display: none !important;
+	}
+}
+
+/* Specifique */
+.nos-ostabs {
+    background : none;
+
+	.nos-ostabs-header {
+		position : relative;
+		z-index : 3;
+
+		li.nos-ostabs-desktoptab {
+            top: 0;
+			bottom : 0 !important;
+			height : 45px !important;
+            margin : 5px 20px;
+			background : none;
+			border : 0;
+            cursor: pointer;
+
+			a {
+				padding : 0;
+
+				span.nos-ostabs-icon {
+					width : 48px !important;
+					line-height : 45px !important;
+					height : 45px !important;
+					background : url(../img/icons/tabs-logo-off.png) no-repeat;
+					top : 0px !important;
+				}
+		    }
+		}
+
+		li.nos-ostabs-desktoptab.ui-state-active, li.nos-ostabs-desktoptab.ui-state-hover {
+		    @include box-shadow(none);
+
+			a span.nos-ostabs-icon {
+				background : url(../img/icons/tabs-logo-on.png) no-repeat;
+		    }
+		}
+
+		ul.nos-ostabs-desktoptab {
+			height : 47px;
+			padding: 0;
+		}
+   }
+}

@@ -1,0 +1,5 @@
+guard 'templates',
+      :output => 'public/assets/js/templates.js',
+      :namespace => 'MyMicroblog' do
+    watch(/fuel\/app\/views\/(.*)\.mustache$/)
+end

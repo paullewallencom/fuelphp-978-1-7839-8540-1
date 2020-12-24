@@ -1,0 +1,18 @@
+{{#posts}}
+    <div class="post" data-post_id="{{id}}">
+        <div class="post_content">{{content}}</div>
+        <div class="post_additional_infos">
+            By
+            <a
+                class="post_author"
+                href="/{{user.username}}">
+                {{user.username}}
+            </a>
+            &middot;
+            <span
+                class="post_date"
+                data-timestamp="{{created_at}}">
+            </span>
+        </div>
+    </div>
+{{/posts}}

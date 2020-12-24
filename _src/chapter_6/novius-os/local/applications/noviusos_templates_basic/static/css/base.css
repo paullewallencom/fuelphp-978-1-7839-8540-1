@@ -1,0 +1,225 @@
+/**
+ * NOVIUS OS - Web OS for digital communication
+ *
+ * @copyright  2011 Novius
+ * @license    GNU Affero General Public License v3 or (at your option) any later version
+ *             http://www.gnu.org/licenses/agpl-3.0.html
+ * @link http://www.novius-os.org
+ */
+
+/**
+ *  Some elements come from http://www.knacss.com/ :
+ *
+ *  KNACSS.com V1.2 @author : Raphael Goetter, Alsacreations
+ *  Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+*/
+
+/**
+ *  Base CSS for the templates
+ */
+
+html, body {
+	margin          : 0;
+	padding         : 0;
+}
+
+body {
+	color           : #333333;
+	font-family     : "Century Gothic", arial, helvetica, sans-serif;
+	font-size       : 13px;
+	line-height     : 1.5;
+}
+
+.print {
+	display         : none;
+}
+
+/* HTML5 tags */
+/*------------*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
+/* soft reset */
+/*------------*/
+
+html, body, blockquote, ul, ol, form {
+    margin          : 0;
+    padding         : 0;
+}
+
+/* Basics elements */
+/*-----------------*/
+
+ul, ol {
+    padding-left    : 2em;
+}
+
+a {
+	outline         : none;
+    text-decoration : none;
+    color           : #333333;
+}
+
+a:hover {
+    text-decoration : underline;
+}
+
+a img {
+	border          : 0;
+}
+
+.clearfloat {
+	clear           : both;
+}
+
+.nobullet {
+	list-style-type : none;
+	margin          : 0;
+	padding         : 0;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, p:first-child {
+    margin-top      : 0;
+}
+
+p:last-child {
+    margin-bottom   : 0;
+}
+
+img, table, td, blockquote, code, pre, textarea, input, object, embed, video {
+    max-width       : 100%;
+    height          : auto;
+}
+
+textarea, table, td, th, code, pre, samp, div, p {
+    word-wrap       : break-word;
+    -webkit-hyphens : auto;
+    -moz-hyphens    : auto;
+    -ms-hyphens     : auto;
+    -o-hyphens      : auto;
+    hyphens         : auto;
+}
+
+code, pre, samp {
+    white-space     : pre-wrap;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+}
+
+/* Formulaires */
+/*-------------*/
+
+form, fieldset {
+	border          : none;
+}
+
+input, button, select {
+  vertical-align    : middle; /* @bugfix alignment */
+}
+
+/* haslayout for IE6/IE7 */
+.ie7 .clearfix,.ie7 .line, .ie7 .mod, .ie7 .row, .ie7 .col {
+    zoom            : 1;
+}
+
+/* inline-block and table-cell for IE6/IE7 */
+/* warning : .col needs width on IE6/IE7 */
+.ie7 .btn, .ie7 .col, .ie7 .inbl {
+    display         : inline;
+    zoom            : 1;
+}
+.ie8 img {
+	width           : auto
+} /* @bugfix for IE8 */
+
+@import url("print.css");
+
+/* Global containers */
+/*-------------------*/
+
+#globalwrapper {
+	background      : url(../img/bkg_header.gif) repeat-x top left;
+}
+
+#globalcontainer {
+	margin          : 0 auto;
+    width           : 900px;
+}
+
+#header {
+	height          : 70px;
+    color           : #ffffff;
+}
+
+#content {
+
+}
+
+#content #page_contexts {
+    font-size: 0.8em;
+}
+#content #page_contexts span {
+    font-style: italic;
+}
+
+
+/* Header */
+/*--------*/
+
+#sitename {
+	margin          : 25px 0 0 0;
+	font-size       : 35px;
+	display         : inline-block;
+}
+
+#header {
+    position: relative;
+}
+#header a, #header a:hover {
+    color           : #ffffff;
+    text-decoration : none;
+}
+
+#header #contexts {
+    position        : absolute;
+    top : 0px;
+    right: 0px;
+    font-size: 0.8em;
+}
+
+/* Content */
+/*--------*/
+
+h1#pagename {
+    font-size       : 25px;
+    margin          : 0 0 10px 0;
+}
+
+#content {
+	padding         : 20px 0;
+	border-bottom   : 1px dotted #cccccc;
+}
+
+/* Footer */
+/*--------*/
+
+#footer_menu {
+	float            : right;
+	margin           : 10px 0 0 0;
+}
+
+#footer_menu li {
+    float            : left;
+    padding          : 0 10px;
+}
+
+#footer_menu a {
+    color            : #666666;
+    font-size        : 12px;
+}
+
+

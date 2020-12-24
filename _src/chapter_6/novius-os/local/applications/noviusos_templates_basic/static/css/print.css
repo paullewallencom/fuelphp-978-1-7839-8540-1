@@ -1,0 +1,68 @@
+/*
+KNACSS.com V1.2 @author : Raphael Goetter, Alsacreations
+Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+*/
+
+body {
+  width: auto!important;
+  margin: auto!important;
+  font-family: "Arial";
+  font-size: 12pt;
+  background-color: #fff!important;
+  color: #000!important;
+}
+p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
+  color: #000!important;
+  margin: auto!important;
+}
+.print {
+  display: block; /* affichage des éléments de classe print */
+}
+.noprint {
+  display : none;
+}
+p, blockquote {
+  orphans: 3; /* pas de ligne seule en bas */
+  widows: 3; /* pas de ligne seule en haut */
+}
+blockquote, ul, ol {
+  page-break-inside: avoid; /* pas de coupure dans ces élements */
+}
+/*h1 {
+  page-break-before: always; /* chaque titre commence sur une nouvelle page *
+}*/
+h1, h2, h3, caption {
+  page-break-after: avoid; /* pas de saut après ces éléments */
+}
+a {
+  color: #000!important;
+  text-decoration: underline!important;
+}
+a[href]:after {
+  content: " (" attr(href) ")"; /* affichage des URL des liens */
+}
+
+/**
+ * NOVIUS OS - Web OS for digital communication
+ *
+ * @copyright  2011 Novius
+ * @license    GNU Affero General Public License v3 or (at your option) any later version
+ *             http://www.gnu.org/licenses/agpl-3.0.html
+ * @link http://www.novius-os.org
+ */
+
+ /* SPECIFIC */
+
+#header, #footer {
+	display : none;
+}
+
+#colright {
+clear : both!important;
+  float : none!important;
+  width : 100%!important;
+}
+
+#content {
+	border : 0;
+}

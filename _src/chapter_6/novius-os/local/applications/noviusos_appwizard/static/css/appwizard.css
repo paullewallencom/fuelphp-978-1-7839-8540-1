@@ -1,0 +1,132 @@
+/**
+ * NOVIUS OS - Web OS for digital communication
+ *
+ * @copyright  2011 Novius
+ * @license    GNU Affero General Public License v3 or (at your option) any later version
+ *             http://www.gnu.org/licenses/agpl-3.0.html
+ * @link http://www.novius-os.org
+ */
+
+.models_list .field_item {
+    border: 1px solid grey;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.crud_options, .column_options {
+    margin-left: 20px;
+}
+
+.crud_options.inactive, .crud_other_options.inactive, .is_title_area.inactive {
+    display: none;
+}
+
+.installation_successful {
+    margin: 20px;
+    margin-top: 35px;
+    padding: 10px;
+    display: none;
+}
+
+.installation_successful p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.installation_successful ul {
+    margin-top: 20px;
+}
+
+.installation_successful li {
+    margin-top: 5px;
+    list-style-type: disc !important;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.installation_successful.done {
+    display: block;
+}
+
+.installation_successful h2 {
+    font-size: 20px;
+}
+
+.installation_successful .sql {
+    margin-top: 5px;
+}
+
+#general_application_settings hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1.appwizard {
+    margin-top: 6px;
+    margin-left: 4%;
+    font-size: 18px;
+}
+
+.appwizard label {
+    display: inline-block;
+}
+
+.appwizard label.inline, .appwizard label.tooltip {
+    display: inline;
+}
+
+.field_item > .labelled_input > label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.field_item .visible_where {
+    margin-top: 15px;
+}
+.appwizard .has_url_enhancer{
+    margin-top: 5px;
+}
+
+.appwizard .blank_slate li {
+    margin: 1em 0;
+    list-style: square;
+}
+
+.appwizard .blank_slate .sql p:first-child {
+     margin-bottom: 2em;
+ }
+
+.appwizard_error {
+    margin-top: 100px;
+    color: rgba(205, 10, 10, 1);
+    font-size: 16px;
+    background-color: rgba(205, 10, 10, 0.1);
+    border: 1px solid rgba(205, 10, 10, 0.6);
+    width: 70%;
+    margin-left: 15%;
+}
+
+.appwizard_error_inside {
+    margin: 20px;
+}
+
+.appwizard_error p {
+    margin: 10px 0px;
+}
+
+.appwizard_command_line_container {
+    margin: 30px 0px;
+}
+
+.appwizard_command_line {
+    display: inline-block;
+    border: 2px dashed rgba(205, 10, 10, 0.6);
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 30px;
+    padding: 0px 5px;
+    font-family: "courier new";
+}
+
+a.appwizard_refresh_link {
+    color: rgba(205, 10, 10, 1);
+}
